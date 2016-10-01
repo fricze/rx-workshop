@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <head>
+      <title>Rx Game</title>
+    </head>
+
+    <style>
+     #error {
+       color: red;
+     }
+
+     #win {
+       color: green;
+     }
+
+     #game {
+       width: 400px;
+       margin: 0 auto;
+       padding: 60px 20px 100px;
+
+       border-left: 2px solid black;
+       border-right: 2px solid black;
+
+       font-family: Arial;
+       font-size: 20px;
+
+       text-align: center;
+     }
+
+     #start_game {
+       border: none;
+       outline: none;
+       background: black;
+
+       width: 200px;
+       height: 40px;
+       display: block;
+       font-family: Arial;
+       font-size: 20px;
+       color: white;
+
+       margin: 0 auto;
+       margin-top: 80px;
+     }
+
+     #interval_label {
+       display: block;
+     }
+
+     #interval {
+       width: 100px;
+       border: none;
+       border-bottom: 2px solid black;
+       outline: none;
+       font-family: Arial;
+       font-size: 20px;
+     }
+
+     #speed {
+       margin-top: 100px;
+     }
+    </style>
+  </head>
+  <body>
+    <div id="game">
+      <p id="text"></p>
+      <p id="error"></p>
+      <p id="win"></p>
+
+      <button id="start_game">
+        start game [enter]
+      </button>
+
+      <p id="speed">
+        average speed (ms):
+        <span id="speed_value"></span>
+      </p>
+
+      <label id="interval_label">
+        <span>time for letter (ms)</span>
+        <input id="interval" type="number" value=""/>
+      </label>
+    </div>
+    <script src="bundles/main.js"></script>
+  </body>
+</html>
