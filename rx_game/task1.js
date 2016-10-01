@@ -3,7 +3,7 @@ import { keyCodes } from './keycodes';
 
 //Next values will be emitted on key down
 const keyDown$ = Rx.Observable.fromEvent(window, 'keydown');
-const charsToType = 'lettergame'.split('');
+const charsToType = 'game'.split('');
 
 // 1) Combine Rx operators in order to make a type game functionality.
 // Every keydown event should be put on a stream, mapped into key code to a char

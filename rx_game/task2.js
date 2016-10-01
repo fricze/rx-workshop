@@ -18,10 +18,14 @@ const interval$ = Rx.Observable.fromEvent(window.interval, 'change')
 const lettersGame$ = letters$
         .distinctUntilChanged()
         .withLatestFrom(interval$)
+        .filter(x => !x.length)
 // 3. combine letters$ stream with the latest value of interval$ string
 // using a proper Rx operator
 // 4. fix the code with timeout operator to throw an error when a time has exceeded
         .timeout(([ , interval]) => Rx.Observable.timer(interval))
-        .subscribe((x) => {
-          console.log(x)
-        }, x => { alert(x) });
+        .subscribe((x) => { console.log(x) },
+                   x => { alert(x) },
+                   () => {
+                     lettersGame$.dispose()
+                     letters$.dispose()
+                   });
