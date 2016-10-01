@@ -15,7 +15,7 @@ const charsToType = 'lettergame'.split('');
 
 
 // in order to get a proper property from a stream we can use `pluck` operator
-export const letters$ = keyDown$.pluck("keyCode")
+export const lettersSubscription = keyDown$.pluck("keyCode")
     // to do something that will not effect a value on a stream we use `do` operator
     .do(keyCode => console.log(keyCode))
     // 1. map keyCodes to the letters
