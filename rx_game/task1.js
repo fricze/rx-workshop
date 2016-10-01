@@ -26,17 +26,17 @@ export const letters$ = keyDown$.pluck("keyCode")
         charsToType) // initial value
   .do(string => console.log(string))
 
-letters$.filter(charArr => !!charArr.length)
-// 4. subscribe and log the winner message
-  .subscribe(() => {
-    console.log('you are still playing!')
-    // 5. dispose subscription
-  });
+// letters$.filter(charArr => !!charArr.length)
+// // 4. subscribe and log the winner message
+//   .subscribe(() => {
+//     console.log('you are still playing!')
+//     // 5. dispose subscription
+//   });
 
-// 3. filter on empty array of characters
-letters$.filter(charArr => !charArr.length)
-// 4. subscribe and log the winner message
-  .subscribe(() => {
-    console.log('you won!')
-    // 5. dispose subscription
-  });
+// // 3. filter on empty array of characters
+// letters$.filter(charArr => !charArr.length)
+// // 4. subscribe and log the winner message
+//   .subscribe(() => {
+//     console.log('you won!')
+//     // 5. dispose subscription
+//   });
