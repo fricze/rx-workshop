@@ -1,4 +1,4 @@
-import { letterCodes } from '../game_src/keycodes';
+import { letterCodes } from '../rx_game/keycodes';
 
 const startButton = window.start_listening;
 const stopButton = window.stop_listening;
