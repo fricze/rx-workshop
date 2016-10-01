@@ -5,8 +5,8 @@ module.exports = {
   context: __dirname,
 
   entry: {
-    main: ['./game_src/main.js'],
-    intro: ['./intro_src/main.js'],
+    main: ['./intro_src/main.js'],
+    // intro: ['./rx_game/main.js'],
   },
 
   devtool: 'source-map',
