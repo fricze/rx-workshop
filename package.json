@@ -11,9 +11,9 @@
     "url": "https://github.com/jonki/rx-workshop"
   },
   "keywords": [],
-  "author": [
+  "authors": [
     "Andrzej Fricze",
-    "Grzegorz Marzencki",
+    "Grzegorz Marzencki"
   ],
   "devDependencies": {
     "babel": "^6.5.2",
